@@ -1,0 +1,24 @@
+<div class="container-fluid">
+<div ng-controller="contactController" id="contact">
+<div class="row">
+<div class=col-md-12>
+<input type="text" ng-model="contact.name" placeholder="Full Name"></input>
+</div>
+</div>
+<div class="row">
+  <div class=col-md-12>
+<input type="text" ng-model="contact.email" placeholder="Email Address"></input>
+</div>
+</div>
+<div class="row">
+  <div class=col-md-12>
+<textarea type="text" ng-model="contact.message" placeholder="What is your reason for contact?"></textarea>
+</div>
+</div>
+<div class="row">
+  <div class=col-md-12>
+<input type="button" value="submit" name="Submit" ng-click="submitRequest();received()"></input>
+</div>
+</div>
+</div>
+</div>

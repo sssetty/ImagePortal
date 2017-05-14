@@ -1,0 +1,19 @@
+<div ng-controller="ImgHome" class="container-fluid" id="home">
+  <div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+     <input type="text" ng-model="Criteria" id="search" placeholder="Enter your search here" onmouseover="this.placeholder=''" onmouseout="this.placeholder='Enter your search here'" "></input><br>
+</div>
+  <div class="col-md-4">
+  </div>
+</div>
+  <div class="row homeContainer">
+  <div ng-repeat="list in List  | filter : {Name : Criteria} " class="homeImages">
+    <a  href="/ImageCategory/{{list.Name}}" class="home-ImagesLink">
+  <img src={{list.ImageURL}} class="rounded home-img">
+     <p>{{list.Name}}</p>
+   </a>
+</div>
+</div>
+</div>

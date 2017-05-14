@@ -1,0 +1,8 @@
+<div ng-controller="ImageUpload">
+<span>Image Category :</span><select ng-model="catg" ng-options="c.Name for c in category" ></select>
+<span>Select Image to Upload</span><input type="file" accept="image/*" onchange="angular.element(this).scope().ImagePreview(this.files)" id="ImgSelect"></input>
+<input type="button" name="Submit" value="Submit Image" ng-click="submitImage()"></input>
+<div>
+<img src="{{Imageurl}}">
+</div>
+</div>
